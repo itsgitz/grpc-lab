@@ -3,8 +3,11 @@
 
 #
 # Run this if you are using PowerShell
+# run-orders:
+# 	@go run $(wildcard services/orders/*.go)
+
 run-orders:
-	@go run $(wildcard services/orders/*.go)
+	@air -c .air.orders.toml 
 
 run-kitchen:
 	@go run services/kitchen/*.go
